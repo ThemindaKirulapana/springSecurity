@@ -46,6 +46,7 @@ public class SecurityConfig {
     public PasswordEncoder passwordEncoder(){
       return new BCryptPasswordEncoder(12);
     }
+    @Bean
     public UserDetailsService userDetailsService(){
         return new UserServiceimpl(passwordEncoder());
     }
